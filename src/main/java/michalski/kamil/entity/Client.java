@@ -1,10 +1,8 @@
 package michalski.kamil.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Client {
@@ -19,6 +17,9 @@ public class Client {
     private String surname;
     @Column(name = "adress")
     private String adress;
+
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders;
 
 
     @Override

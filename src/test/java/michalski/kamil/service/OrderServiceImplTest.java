@@ -33,7 +33,6 @@ public class OrderServiceImplTest {
     private Product product;
 
 
-
     @Before
     public void setUp() throws Exception {
         this.client = clientService.findById(1L);
@@ -47,7 +46,7 @@ public class OrderServiceImplTest {
     }
 
     @Test
-    public void saveOrder() throws Exception{
+    public void saveOrder() throws Exception {
 
         List<Product> products = new ArrayList<>();
         products.add(this.product);
@@ -61,10 +60,10 @@ public class OrderServiceImplTest {
 
     @Test
     @Transactional
-    public void shouldHaveOneOrder(){
-        List<Order> orders  = orderService.findAll();
+    public void shouldHaveOneOrder() {
+        List<Order> orders = orderService.findAll();
         orders.forEach(System.out::println);
-        Assert.assertEquals(1,orders.size());
+        Assert.assertEquals(1, orders.size());
     }
 
 }
