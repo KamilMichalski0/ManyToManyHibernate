@@ -1,4 +1,4 @@
-package michalski.kamil;
+package michalski.kamil.entity;
 
 
 import javax.persistence.*;
@@ -23,6 +23,9 @@ public class Order {
             inverseJoinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "product_id")})
     private List<Product> products;
 
+    public Order() {
+    }
+
     public long getId() {
         return id;
     }
@@ -45,5 +48,14 @@ public class Order {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", client=" + client +
+                ", products=" + products +
+                '}';
     }
 }

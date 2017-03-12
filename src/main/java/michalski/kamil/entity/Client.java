@@ -1,9 +1,11 @@
-package michalski.kamil;
+package michalski.kamil.entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
 @Entity
 public class Client {
 
@@ -11,10 +13,11 @@ public class Client {
     @GeneratedValue
     private long id;
 
+    @Column(name = "first_name")
     private String name;
-
+    @Column(name = "last_name")
     private String surname;
-
+    @Column(name = "adress")
     private String adress;
 
 
@@ -35,7 +38,6 @@ public class Client {
     public long getId() {
         return id;
     }
-
 
 
     public String getName() {

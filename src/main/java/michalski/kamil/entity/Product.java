@@ -1,4 +1,6 @@
-package michalski.kamil;
+package michalski.kamil.entity;
+
+import michalski.kamil.entity.Order;
 
 import javax.persistence.*;
 import java.io.Serializable;
